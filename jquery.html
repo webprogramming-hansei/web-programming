@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Demo</title>
+    <style>
+      a.test {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://jquery.com/" class="test">jQuery</a>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        console.log("document ready");
+        $("a").click(function (event) {
+          $( "a" ).removeClass( "test" );
+          // alert("As you can see, the link no longer took you to jquery.com");
+          event.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+.common-fontstyle {
+  color: blue;
+  font-size: 20pt;
+}
+
+#id-style {
+  color: red;
+}
+
+body {
+  color: green;
+  font-size: 40pt;
+  background-color: black;
+  padding-left: 100px;
+  margin: 0;
+}
+
+h4 {
+  color: yellow;
+}
+
+ul #white-font {
+  color: white;
+}
+
+ul .red-font {
+  color: red;
+}
+
+button {
+  width: 200px;
+  height: 30px;
+}

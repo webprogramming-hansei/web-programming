@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>chart.js 활용</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+  </head>
+  <body>
+    <canvas id="myChart" width="800" height="400"></canvas>
+    <script>
+      // JavaScript Object
+      /*
+       {
+         key1: value1,
+         key2: value2,
+         key3: value3
+       }
+      */
+      const address = "경기도 군포시 산본 xxxxxx";
+      const student = {
+        name: "박종진",
+        studentNo: 200300000,
+        age: 38,
+        email: "pjj1029@hansei.ac.kr",
+        address,
+      };
+
+      // const address = "경기도 군포시 산본 xxxxxx";
+      // student.address = address;
+      // student["address"] = address;
+
+      console.log(student.name, student.age, student.address);
+
+      // JavaScript Array (배열)
+      /*
+       [1, 2, 3, 4], ["a", "b", "c", "d"], [student, student1, student2]
+      */
+      const numberArray = [1, 2, 3, 4];
+      console.log(numberArray[0], numberArray[1], numberArray[2]);
+      for (let i = 0; i < numberArray.length; i++) {
+        console.log(numberArray[i]);
+      }
+
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["1주차", "2주차", "3주차", "4주차", "5주차", "6주차"],
+          datasets: [
+            {
+              label: "출석인원",
+              data: [90, 31, 29, 25, 29, 20],
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
